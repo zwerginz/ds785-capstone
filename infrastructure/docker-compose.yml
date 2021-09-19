@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    hostname: sql-server
+    container_name: sql-server
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=DS785password
+      - MSSQL_PID=Express
+    volumes:
+      - sqlvolume:/var/opt/mssql
+
+volumes:
+  sqlvolume: {}

@@ -13,6 +13,18 @@ services:
       - MSSQL_PID=Express
     volumes:
       - sqlvolume:/var/opt/mssql
+  mongodb-server:
+    image: mongo:4.4.9
+    hostname: mongodb-server
+    container_name: mongodb-server
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: DS785password
+    volumes:
+      - mongovolume:/data/db
 
 volumes:
-  sqlvolume: {}
+  sqlvolume:
+  mongovolume:  

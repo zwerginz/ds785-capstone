@@ -1,0 +1,9 @@
+CREATE TABLE Hub_Territory (
+    TerritoryID BIGINT IDENTITY(1,1) NOT NULL,
+    [Name] NVARCHAR(100) NOT NULL,
+    LOAD_DATE DATETIME NOT NULL,
+    RECORD_SOURCE NVARCHAR(100) NOT NULL,
+    PRIMARY KEY (TerritoryID)
+)
+
+CREATE UNIQUE INDEX hub_territory_i1 ON Hub_Territory ([Name])

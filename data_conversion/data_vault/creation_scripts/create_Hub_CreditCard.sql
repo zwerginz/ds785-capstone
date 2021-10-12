@@ -1,0 +1,9 @@
+CREATE TABLE Hub_CreditCard (
+    CreditCardID BIGINT IDENTITY(1,1) NOT NULL,
+    CardNumber NVARCHAR(16) NOT NULL,
+    LOAD_DATE DATETIME NOT NULL,
+    RECORD_SOURCE NVARCHAR(100) NOT NULL,
+    PRIMARY KEY (CreditCardID)
+)
+
+CREATE UNIQUE INDEX hub_creditcard_i1 ON Hub_CreditCard (CardNumber)

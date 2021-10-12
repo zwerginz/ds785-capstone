@@ -1,0 +1,16 @@
+USE AdventureWorksDataVault;
+GO
+
+DROP TABLE IF EXISTS Hub_Person;
+GO
+
+CREATE TABLE Hub_Person (
+    PersonID BIGINT IDENTITY(1,1) NOT NULL,
+    EmailAddress NVARCHAR(100) NOT NULL,
+    LOAD_DATE DATETIME NOT NULL,
+    RECORD_SOURCE NVARCHAR(100) NOT NULL,
+    PRIMARY KEY (PersonID)
+)
+
+CREATE UNIQUE INDEX hub_person_i1 ON hub_person (EmailAddress)
+GO

@@ -1,0 +1,14 @@
+USE AdventureWorksDataVault;
+GO
+
+DROP TABLE IF EXISTS Hub_Order;
+GO
+
+CREATE TABLE Hub_Order (
+    HubOrderID BIGINT IDENTITY(1,1) PRIMARY KEY,
+    SalesOrderNumber NVARCHAR(100) NOT NULL,
+    LOAD_DATE DATETIME NOT NULL,
+    RECORD_SOURCE NVARCHAR(100) NOT NULL,
+)
+
+CREATE UNIQUE INDEX hub_order_i1 ON Hub_Order (SalesOrderNumber)

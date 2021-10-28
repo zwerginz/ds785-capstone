@@ -1,0 +1,14 @@
+USE AdventureWorksDataVault;
+GO
+
+DROP TABLE IF EXISTS Sat_Person;
+GO
+
+CREATE TABLE Sat_Person (
+    HubPersonID BIGINT,
+    CustomerID BIGINT,
+    LOAD_DATE DATETIME NOT NULL,
+    RECORD_SOURCE NVARCHAR(100) NOT NULL,
+    PRIMARY KEY (HubPersonID, LOAD_DATE),
+    FOREIGN KEY (HubPersonID) REFERENCES Hub_Person
+)

@@ -1,9 +1,15 @@
+USE AdventureWorksDataVault;
+GO
+
+DROP TABLE IF EXISTS Hub_Address;
+GO
+
 CREATE TABLE Hub_Address (
-    AddressID BIGINT IDENTITY(1,1) NOT NULL,
+    HubAddressID BIGINT IDENTITY(1,1) NOT NULL,
     FullAddress NVARCHAR(500) NOT NULL,
     LOAD_DATE DATETIME NOT NULL,
     RECORD_SOURCE NVARCHAR(100) NOT NULL,
-    PRIMARY KEY (AddressID)
+    PRIMARY KEY (HubAddressID)
 )
 
 CREATE UNIQUE INDEX hub_address_i1 ON Hub_Address (FullAddress)

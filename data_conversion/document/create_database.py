@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import pymongo
 
 def create_database():
-    CONNECTION_STRING = "mongodb://root:DS785password@deckard:27017/admin"
+    CONNECTION_STRING = ""
 
     from pymongo import MongoClient
     client = MongoClient(CONNECTION_STRING)

@@ -9,7 +9,7 @@ services:
       - "1433:1433"
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=DS785password
+      - SA_PASSWORD=something
       - MSSQL_PID=Express
     volumes:
       - sqlvolume:/var/opt/mssql
@@ -20,8 +20,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: DS785password
+      MONGO_INITDB_ROOT_USERNAME: something
+      MONGO_INITDB_ROOT_PASSWORD: something
     volumes:
       - mongovolume:/data/db
 

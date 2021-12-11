@@ -30,10 +30,10 @@ def connect_to_mongo():
     return client['AdventureWorksDocument']
 
 def connect_to_sql():
-    server = 'tcp:deckard' 
-    database = 'AdventureWorks2019' 
-    username = 'sa' 
-    password = 'DS785password' 
+    server = '' 
+    database = '' 
+    username = '' 
+    password = '' 
     return pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 
 cnxn = connect_to_sql()
